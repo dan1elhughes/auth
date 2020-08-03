@@ -6,6 +6,12 @@ For use in internally accessible LAN servers only.
 
 ## Usage:
 
+Fetch the script into /usr/local/bin:
+
+```
+$ sudo wget https://raw.githubusercontent.com/dan1elhughes/auth/master/auth.sh -O /usr/local/bin/auth.sh
+```
+
 In `/etc/ssh/sshd_config`, add:
 
 ```
