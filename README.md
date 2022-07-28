@@ -6,15 +6,25 @@ For use in internally accessible LAN servers only.
 
 ## Usage:
 
-Fetch the script into /usr/local/bin:
+Get the script:
 
-```
-$ sudo wget https://raw.githubusercontent.com/dan1elhughes/auth/master/auth.sh -O /usr/local/bin/auth.sh
+```sh
+# Fetch the script into `/usr/local/bin`:
+$ sudo wget https://raw.githubusercontent.com/dan1elhughes/auth/master/auth.sh -O /usr/local/bin/auth
+
+# Enable the script
+$ sudo chmod 755 /usr/local/bin/auth
 ```
 
 In `/etc/ssh/sshd_config`, add:
 
 ```
-AuthorizedKeysCommand /usr/local/bin/auth.sh
+AuthorizedKeysCommand /usr/local/bin/auth
 AuthorizedKeysCommandUser nobody
+```
+
+Restart SSH:
+
+```
+$ sudo service sshd restart
 ```
