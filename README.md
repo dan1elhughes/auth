@@ -16,6 +16,14 @@ $ sudo wget https://raw.githubusercontent.com/dan1elhughes/auth/master/auth.sh -
 $ sudo chmod 755 /usr/local/bin/auth
 ```
 
+Enable the cache file (contents are globally editable on the server, so only use this on LAN-only boxes on networks you trust)
+
+```
+$ sudo touch /tmp/keycache
+$ sudo chown nobody: /tmp/keycache
+$ sudo chmod 755 /tmp/keycache
+```
+
 In `/etc/ssh/sshd_config`, add:
 
 ```
