@@ -10,18 +10,18 @@ Get the script:
 
 ```sh
 # Fetch the script into `/usr/local/bin`:
-$ sudo wget https://raw.githubusercontent.com/dan1elhughes/auth/master/auth.sh -O /usr/local/bin/auth
+sudo wget https://raw.githubusercontent.com/dan1elhughes/auth/master/auth.sh -O /usr/local/bin/auth
 
 # Enable the script
-$ sudo chmod 755 /usr/local/bin/auth
+sudo chmod 755 /usr/local/bin/auth
 ```
 
 Enable the cache file (contents are globally editable on the server, so only use this on LAN-only boxes on networks you trust)
 
-```
-$ sudo touch /tmp/keycache
-$ sudo chown nobody: /tmp/keycache
-$ sudo chmod 755 /tmp/keycache
+```sh
+sudo touch /tmp/keycache
+sudo chown nobody: /tmp/keycache
+sudo chmod 755 /tmp/keycache
 ```
 
 In `/etc/ssh/sshd_config`, add:
@@ -33,6 +33,6 @@ AuthorizedKeysCommandUser nobody
 
 Restart SSH:
 
-```
-$ sudo service sshd restart
+```sh
+sudo service sshd restart
 ```
